@@ -8,6 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan({ "com.exusiasoftware" })
 public class CustomerApiApplication {
 
+	
+	
 	public static void main(String[] args) {
 		SpringApplication.run(CustomerApiApplication.class, args);
 	}

@@ -1,17 +1,22 @@
 package com.exusiasoftware.model;
-import org.springframework.stereotype.Component;
 
+import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.annotation.JsonRootName;
 
 @Component
 @JsonRootName("Customer")
 
+
 public class Customer {
+
 	private Integer id;
 	private String name;
 	private String title;
 	private String department;
 
+	
+	
+	
 	public Customer() {
 	}
 

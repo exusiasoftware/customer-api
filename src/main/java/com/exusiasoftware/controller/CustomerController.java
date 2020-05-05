@@ -2,6 +2,8 @@ package com.exusiasoftware.controller;
 
 import java.util.List;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,11 +12,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+
 
 import com.exusiasoftware.model.Customer;
 import com.exusiasoftware.service.CustomerService;
+
 
 
 
@@ -55,8 +59,17 @@ public class CustomerController {
 		return service.delete(id);
 	}
 
-	@GetMapping(value = "customers")
-	public List<Customer> findCustomerByName(@RequestParam("name") String name) {
+	@GetMapping(value = "customer/name/{name}") 
+	 public List<Customer> findCustomerByName(@PathVariable String name)  {
+	 	
 		return service.findCustomerByName(name);
 	}
+
+
+
+
+
+
+
 }
+
