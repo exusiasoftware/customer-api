@@ -14,8 +14,7 @@ public class Customer {
 	private String title;
 	private String department;
 
-	
-	
+
 	
 	public Customer() {
 	}

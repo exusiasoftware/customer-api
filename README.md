@@ -18,16 +18,9 @@ Example solution:
     --------------------------      --------------------------
       Customer-API Port 8080          Customer-API Port 8080 
     --------------------------      --------------------------  
-                           |           |
-                        -------------------
-                         Data Source MYSQL
-                        -------------------
+                    
 
 ````
-
-
-
-
 
 
 Compile code run:
@@ -45,13 +38,26 @@ java -jar customer-api-xxx.jar
 Create a Docker image:
 
 ````
-docker build customer-api:xxx .
+docker build -t customer-api:xxx .
 ````
 Create a docker container from image: 
 
 ````
-docker run -d -p 8080:8080 --name customer-api
+docker run -d -p 8080:8080 --name customer-api customer-api:xxx
 ````
+
+Create a Kubernetes Deployment:
+
+````
+kubectl create -f customer-api-deployment.yml 
+````
+Create a Kubernetes Service:
+
+````
+kubectl create -f loadblancer-customer-api.yml
+````
+
+
 
 
 ## Usage: 

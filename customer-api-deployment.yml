@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer-api-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: customer-api
+  template:
+    metadata:
+      labels:
+        app: customer-api
+    spec:
+      containers:
+        - name: customerapi
+          image: customer-api:xxx
+          ports:
+            - containerPort: 8080
+
+  #to remove this: kubectl delete deployment customer-api-deployment
