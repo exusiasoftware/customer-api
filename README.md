@@ -1,8 +1,13 @@
 # Customer REST API 
 Spring Web API Framework 
-use to test Docker and Kubeneties Microservices 
+use to test Docker and Kubernetes Microservices 
 
 Example solution:
+
+index.html
+
+ ![Index.html](webindex.png)
+
 
 ````
                          ---------------
@@ -21,6 +26,9 @@ Example solution:
                     
 
 ````
+
+
+
 
 
 Compile code run:

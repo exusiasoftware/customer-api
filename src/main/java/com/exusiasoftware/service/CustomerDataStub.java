@@ -12,11 +12,13 @@ import com.exusiasoftware.model.Customer;
 public class CustomerDataStub {
 	private static Map<Integer, Customer> customers = new HashMap<Integer, Customer>();
 
-	// Create some sample users here=>
+
 	static {
-		customers.put(1, new Customer(1, "Phil Herold", "Manager", "R&D"));
-		customers.put(2, new Customer(2, "Chris Olinger", "CTO", "Executive"));
-		customers.put(3, new Customer(3, "John Leveille", "CEO", "Executive"));
+		customers.put(1, new Customer(1, "Avery Bean", "Manager", "R&D"));
+		customers.put(2, new Customer(2, "Daniels Yang", "CTO", "Executive"));
+		customers.put(3, new Customer(3, "Lenore Lane", "CEO", "Executive"));
+		customers.put(4, new Customer(4, "Ruthie Parks", "IT Manager", "IT"));
+		customers.put(5, new Customer(5, "Rachael Foster", "Manager", "Production"));
 	}
 
 	public static List<Customer> getAllCustomers() {
