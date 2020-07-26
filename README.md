@@ -28,9 +28,6 @@ index.html
 ````
 
 
-
-
-
 Compile code run:
 
 ````
@@ -40,7 +37,7 @@ mvn clean install
 Run the application on workstation:
 
 ````
-java -jar customer-api-xxx.jar
+java -jar customer-api-1.0.0.jar
 ````
 
 Create a Docker image:
@@ -79,7 +76,7 @@ GET /customer-api/v1/customers/all
 Get Customer by id:
 
 ````
-GETT /customer-api/v1/customer/{id}
+GET /customer-api/v1/customer/{id}
 ````
 
 Add a Customer 
