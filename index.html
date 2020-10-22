@@ -116,10 +116,11 @@
       var finalResponse = "";
       var div = document.getElementById( 'updateUser' );
       div.style.visibility = 'hidden';  
+      var SERVERADDR = 'customer-api-dev.us-west-2.elasticbeanstalk.com'
       
       function searchCustomer() {
           var customerName = document.getElementById("search").value;
-          var url  = "http://localhost:8080/customer-api/v1/customer/name/";
+          var url  = "http://" + SERVERADDR + "/customer-api/v1/customer/name/";
           var xhr  = new XMLHttpRequest();
           xhr.open('GET', url+customerName, true);
           var div = document.getElementById('updateUser');
@@ -144,7 +145,7 @@
           var xhr = new XMLHttpRequest();
           var div = document.getElementById( 'updateUser' ); 
           div.style.visibility = 'hidden'; 
-          var url  = "http://localhost:8080/customer-api/v1/customer/";
+          var url  = "http://" + SERVERADDR + "/customer-api/v1/customer/";
           customerID =  document.getElementById("idUpdate").value,
           xhr.open('PUT', url+customerID, true);
           var params = JSON.stringify(
@@ -170,14 +171,14 @@
                   department: document.getElementById("department").value,
               }
           );
-          xhr.open("POST", "http://localhost:8080/customer-api/v1/customers", true);
+          xhr.open("POST", "http://" + SERVERADDR + "/customer-api/v1/customers", true);
           xhr.setRequestHeader("Content-type", "application/json");
           xhr.send(params);
           return false;
       }
 
       function getCustomer(customerID) {
-        var url  = "http://localhost:8080/customer-api/v1/customer/";
+        var url  = "http://" + SERVERADDR + "/customer-api/v1/customer/";
         var xhr  = new XMLHttpRequest();
         xhr.open('GET', url+customerID, true);
         var div = document.getElementById( 'updateUser' );
@@ -200,7 +201,7 @@
 
 
       function deleteCustomer(customerID) {
-        var url = "http://localhost:8080/customer-api/v1/customers/";
+        var url = "http://" + SERVERADDR + "/customer-api/v1/customers/";
         var xhr = new XMLHttpRequest();
         xhr.open("DELETE", url+customerID, true);
         xhr.onload = function () {
@@ -217,7 +218,7 @@
 
       function getCustomers() {
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "http://localhost:8080/customer-api/v1/customers/all", true);
+        xhr.open("GET", "http://" + SERVERADDR + "/customer-api/v1/customers/all", true);
         xhr.setRequestHeader("Content-type", "application/json");
   
         xhr.onreadystatechange = function(){     

@@ -37,7 +37,7 @@ mvn clean install
 Run the application on workstation:
 
 ````
-java -jar customer-api-1.0.0.jar
+java -jar target/customer-api-1.0.0.jar
 ````
 
 Create a Docker image:
@@ -70,19 +70,19 @@ kubectl create -f loadblancer-customer-api.yml
 Get all Customers:
 
 ````
-GET /customer-api/v1/customers/all
+GET http://{servername}:8080/customer-api/v1/customers/all
 ````
 
 Get Customer by id:
 
 ````
-GET /customer-api/v1/customer/{id}
+GET http://{servername}:8080/customer-api/v1/customer/{id}
 ````
 
 Add a Customer 
 
 ````
-POST /customer-api/v1/customers
+POST http://{servername}:8080/customer-api/v1/customers
 
 Header: application/json
 
@@ -95,10 +95,10 @@ Header: application/json
 
 
 ````
-Update a Customer by id
+Update Customer by id
 
 ````
-PUT /customer-api/v1/customers/{id}
+PUT http://{servername}:8080/customer-api/v1/customers/{id}
 
 Header: application/json
 
@@ -112,12 +112,12 @@ Delete a Customer by id
 
 
 ````
-DELETE /customer-api/v1/customer/{id}
+DELETE http://{servername}:8080/customer-api/v1/customer/{id}
 ````
 
 Search Customer name:
 
 `````
-GET  /customer-api/v1/customer/name/{name}
+GET  http://{servername}:8080/customer-api/v1/customer/name/{name}
 `````
 
