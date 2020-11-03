@@ -4,9 +4,9 @@ use to test Docker and Kubernetes Microservices
 
 Example solution:
 
-index.html
+/web/index.html
 
- ![Index.html](webindex.png)
+ ![/web/Index.html](./web/webindex.png)
 
 
 ````
